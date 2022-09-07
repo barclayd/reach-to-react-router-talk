@@ -1,14 +1,11 @@
-import {Link} from '@reach/router';
-import React from 'react';
-
+import { Link } from '@reach/router';
 
 export const Nav = () => (
-    <>
-        <h1>Tutorial!</h1>
-        <nav>
-            <Link to="/">Home</Link>{" "}
-            <Link to="dashboard">Dashboard</Link>{" "}
-            <Link to="invoices">Invoices</Link>
-        </nav>
-    </>
-)
+  <>
+    <h1>Tutorial!</h1>
+    <nav>
+      <Link to="/">Home</Link> <Link to="dashboard">Dashboard</Link>{' '}
+      <Link to="invoices">Invoices</Link>
+    </nav>
+  </>
+);
