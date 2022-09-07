@@ -1,6 +1,6 @@
 # What this talk involves 🎤
 
-- Our current routing solution and why it's not great
+- Explores our current routing solution. Why it's not the best and how it can be made better
 - Exploring the alternative solutions
 - Why `react-router` solves (most of) our problems
 - Areas of note for `react-router`

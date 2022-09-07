@@ -8,6 +8,7 @@ export const Invoice = (props) => {
   return (
     <div>
       <h2>Invoice {props.invoiceId}</h2>
+      <p>I was rendered on path: {props.location.pathname}</p>
     </div>
   );
 };

@@ -22,7 +22,7 @@ export const Routes = ({ isAuthorized }) => (
       <Invoice path=":invoiceId" />
     </Invoices>
     <Secret path="secret" />
-    <Login path={isAuthorized ? '/logout' : '/login'} />
+    <Login path="/login" />
     <NotFound default />
   </Router>
 );
