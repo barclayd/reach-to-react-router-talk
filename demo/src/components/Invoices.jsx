@@ -10,6 +10,9 @@ export const Invoices = (props) => (
       <li>
         <Link to="/invoices/abc">Invoice ABC</Link>
       </li>
+      <li>
+        <Link to="/invoices/mystery">Invoice mystery</Link>
+      </li>
     </ul>
 
     {props.children}
