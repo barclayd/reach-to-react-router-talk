@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
-export const Invoices = (props) => (
+export const Invoices = () => (
   <div>
     <h2>Invoices</h2>
     <ul>
@@ -15,6 +15,6 @@ export const Invoices = (props) => (
       </li>
     </ul>
 
-    {props.children}
+    <Outlet />
   </div>
 );

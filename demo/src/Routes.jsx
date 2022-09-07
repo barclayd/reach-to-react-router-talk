@@ -19,7 +19,7 @@ export const Routes = ({ isAuthorized }) => (
       <Route path="/dashboard" element={<Dashboard />} />
     </Route>
     <Route path="invoices" element={<Invoices />}>
-      <Route path="" element={<InvoicesIndex />} />
+      <Route index element={<InvoicesIndex />} />
       <Route path=":invoiceId" element={<Invoice />} />
     </Route>
     <Route path="secret" element={<Secret />} />
