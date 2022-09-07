@@ -1,13 +1,5 @@
-import { Redirect } from '@reach/router';
+import { Navigate, Outlet } from 'react-router-dom';
 
-export const ProtectedRoute = ({
-  isAuthorized,
-  component: Component,
-  ...rest
-}) => {
-  return isAuthorized ? (
-    <Component {...rest} />
-  ) : (
-    <Redirect to="/login" noThrow />
-  );
+export const ProtectedRoute = ({ isAuthorized }) => {
+  return isAuthorized ? <Outlet /> : <Navigate to="/login" replace />;
 };

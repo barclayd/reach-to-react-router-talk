@@ -1,8 +1,8 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { renderWithRouterWrapper } from './utils';
+import { renderWithRouter } from './utils';
 
 it('can render multiple routes', () => {
-  renderWithRouterWrapper({ route: '/' });
+  renderWithRouter({ route: '/' });
 
   expect(screen.getByRole('heading', { name: 'Welcome' })).toBeVisible();
 

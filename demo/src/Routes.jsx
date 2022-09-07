@@ -1,4 +1,4 @@
-import { Router } from '@reach/router';
+import { Routes as BrowserRoutes, Route } from 'react-router-dom';
 import { Dashboard } from './components/Dashboard';
 import { Home } from './components/Home';
 import { Invoices } from './components/Invoices';
@@ -10,19 +10,20 @@ import { Login } from './components/Login';
 import { ProtectedRoute } from './components/ProtectedRoute';
 
 export const Routes = ({ isAuthorized }) => (
-  <Router>
-    <Home path="/" />
-    <ProtectedRoute
-      component={Dashboard}
+  <BrowserRoutes>
+    <Route path="/" element={<Home />} />
+    <Route
       path="/dashboard"
-      isAuthorized={isAuthorized}
-    />
-    <Invoices path="invoices">
-      <InvoicesIndex path="/" />
-      <Invoice path=":invoiceId" />
-    </Invoices>
-    <Secret path="secret" />
-    <Login path={isAuthorized ? '/logout' : '/login'} />
-    <NotFound default />
-  </Router>
+      element={<ProtectedRoute isAuthorized={isAuthorized} />}
+    >
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Route>
+    <Route path="invoices" element={<Invoices />}>
+      <Route path="" element={<InvoicesIndex />} />
+      <Route path=":invoiceId" element={<Invoice />} />
+    </Route>
+    <Route path="secret" element={<Secret />} />
+    <Route path="login" element={<Login />} />
+    <Route path="*" element={<NotFound />} />
+  </BrowserRoutes>
 );

@@ -1,4 +1,4 @@
-import { useParams, useNavigate, useLocation } from '@reach/router';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 
 export const Invoice = () => {
   const { invoiceId } = useParams();
